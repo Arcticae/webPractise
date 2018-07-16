@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+  <head>
+    <title>Navbar Welcome!</title>
+
+    <meta charset="UTF-8">
+    <!--meta http-equiv="refresh" content="1"-->
+    <meta name="author" content="Ja" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+    <link rel="stylesheet" href="../CSS/w3_styles.css"/>
+  </head>
+  
+  <body style="background-color:gainsboro;">
+    <h1 style="text-align: center;">Center Header number one.</h1>
+    <br>
+
+    <a href="#cytat"><img src="./sample.jpg" alt="Close-up textile material" width="200" height="200"></a>
+    <p title="This button leads to google">Hover over me to show what the button does</p>
+    <a href="https://google.com" target="_self"><button>Misterious button</button></a>
+    <hr>
+    <h2 style="font-family:'Courier New'">Header number two. (courier-new)</h2>
+    <ul style="list-style-type:square;">
+      <li>This is a unordered list element</li>
+      <li><button title="I don't do nuffin">Button!</button></li>
+      <li><a href="https://google.com" target="_blank">Google!</a></li>
+    </ul>
+
+    <pre>Pre tag preserves
+    how the text
+    is writen 
+    originally.
+    </pre>
+
+  <!--Different markdowns for text styling-->
+  <b>This is bold text</b> <br>
+  <strong>Strong is same as bold but MORE</strong> <br>
+  <em>Emphasized 'em' = italic</em> <br>
+  <i>Italic original</i> <br>
+  <mark>this txt is marked yellow</mark><br>
+  <small>Small element is smol</small><br>
+  <del>This is not important anymoar</del><br>
+  <ins>This is underlined (ins)</ins><br>
+  <sub>Subscripted</sub>
+  <sup>Superscripted</sup><br>
+
+  <!--Quotations-->
+
+  <q>Blockquote underneath. This is normal quote</q>
+
+  <div id="cytat">
+    <blockquote cite="http://www.worldwildlife.org/who/index.html" >
+      For 50 years, WWF has been protecting the future of nature.
+      The world's leading conservation organization,
+      WWF works in 100 countries and is supported by
+      1.2 million members in the United States and
+      close to 5 million globally.
+    </blockquote>
+  </div>
+  <abbr title="Jestem porzadny">JP</abbr>
+  <table>
+    <caption style="border:2px solid black;">This is caption</caption>
+      <tr>
+        <th></th>
+        <td>Kyle</td>
+        <td colspan="2">Thomas</td>
+        
+      </tr> 
+      <tr>
+        <th>X</th>
+        <td rowspan="2">rowspan2</td>
+        <td colspan="2">colspan2</td>
+      </tr>
+      <tr>
+        <th>Y</th>
+        <td>1el</td>
+        <td>1el</td>
+      </tr>
+  </table>
+  <iframe  src="https://www.agh.edu.pl/" style="height:400px;width:70%;border:none;">
+    </iframe>
+  <br>
+  
+  <button type ="button" onclick="showGreetings()">Hello!</button>
+  <button type ="button" onclick="enhanceFont()">Enhance Font!</button>
+  <button type ="button" onclick="decreaseFont()">Decrease Font!</button>
+  <p id="scriptdemo">
+    Say hello
+  </p>
+  
+  <script>
+    function showGreetings(){
+    document.getElementById("scriptdemo").innerHTML="Hello you too!";
+    }
+    function enhanceFont(){
+      document.getElementById("scriptdemo").style.fontSize="40px";
+    }
+    function decreaseFont(){
+      document.getElementById("scriptdemo").style.fontSize="30px";
+    }
+  </script>
+
+  <form>
+    Enter your name:<br> 
+    <input type="text"><br>
+    Select gender:<br>
+    Male<input type="radio" name="gender"><br>
+    Female<input type="radio" name="gender"><br>
+    Other<input type="radio" name="gender"><br>  
+    <input type="submit" >
+  </form>
+  <br><br>
+  </body>
+
+</html>
