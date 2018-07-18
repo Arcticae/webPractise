@@ -1,115 +1,362 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 
-  <head>
-    <title>Navbar Welcome!</title>
+<head>
+  <title>Navbar Welcome!</title>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=showMap"></script>
+  <meta charset="UTF-8">
+  <!--meta http-equiv="refresh" content="1"-->
+  <meta name="author" content="Ja" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
+  <link rel="stylesheet" href="../CSS/w3_styles.css" />
+</head>
 
-    <meta charset="UTF-8">
-    <!--meta http-equiv="refresh" content="1"-->
-    <meta name="author" content="Ja" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 " />
-    <link rel="stylesheet" href="../CSS/w3_styles.css"/>
-  </head>
-  
-  <body style="background-color:gainsboro;">
-    <h1 style="text-align: center;">Center Header number one.</h1>
-    <br>
+<body style="background-color:gainsboro;">
+  <h1 style="text-align: center;">Center Header number one.</h1>
+  <br>
 
-    <a href="#cytat"><img src="./sample.jpg" alt="Close-up textile material" width="200" height="200"></a>
-    <p title="This button leads to google">Hover over me to show what the button does</p>
-    <a href="https://google.com" target="_self"><button>Misterious button</button></a>
-    <hr>
-    <h2 style="font-family:'Courier New'">Header number two. (courier-new)</h2>
-    <ul style="list-style-type:square;">
-      <li>This is a unordered list element</li>
-      <li><button title="I don't do nuffin">Button!</button></li>
-      <li><a href="https://google.com" target="_blank">Google!</a></li>
-    </ul>
+  <figure>
+    <a href="#cytat">
+      <img src="./sample.jpg" alt="Close-up textile material" width="200" height="200">
+    </a>
+    <figcaption>This is some random picture of textile w. a link to. google </figcaption>
+  </figure>
+  <p title="This button leads to google">Hover over me to show what the button does</p>
+  <a href="https://google.com" target="_self">
+    <button>Misterious button</button>
+  </a>
+  <hr>
+  <h2 style="font-family:'Courier New'">Header number two. (courier-new)</h2>
+  <ul style="list-style-type:square;">
+    <li>This is a unordered list element</li>
+    <li>
+      <button title="I don't do nuffin">Button!</button>
+    </li>
+    <li>
+      <a href="https://google.com" target="_blank">Google!</a>
+    </li>
+  </ul>
 
-    <pre>Pre tag preserves
+  <pre>Pre tag preserves
     how the text
     is writen 
     originally.
     </pre>
 
   <!--Different markdowns for text styling-->
-  <b>This is bold text</b> <br>
-  <strong>Strong is same as bold but MORE</strong> <br>
-  <em>Emphasized 'em' = italic</em> <br>
-  <i>Italic original</i> <br>
-  <mark>this txt is marked yellow</mark><br>
-  <small>Small element is smol</small><br>
-  <del>This is not important anymoar</del><br>
-  <ins>This is underlined (ins)</ins><br>
+  <b>This is bold text</b>
+  <br>
+  <strong>Strong is same as bold but MORE</strong>
+  <br>
+  <em>Emphasized 'em' = italic</em>
+  <br>
+  <i>Italic original</i>
+  <br>
+  <mark>this txt is marked yellow</mark>
+  <br>
+  <small>Small element is smol</small>
+  <br>
+  <del>This is not important anymoar</del>
+  <br>
+  <ins>This is underlined (ins)</ins>
+  <br>
   <sub>Subscripted</sub>
-  <sup>Superscripted</sup><br>
+  <sup>Superscripted</sup>
+  <br>
 
   <!--Quotations-->
 
   <q>Blockquote underneath. This is normal quote</q>
 
   <div id="cytat">
-    <blockquote cite="http://www.worldwildlife.org/who/index.html" >
-      For 50 years, WWF has been protecting the future of nature.
-      The world's leading conservation organization,
-      WWF works in 100 countries and is supported by
-      1.2 million members in the United States and
-      close to 5 million globally.
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+      For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100
+      countries and is supported by 1.2 million members in the United States and close to 5 million globally.
     </blockquote>
   </div>
   <abbr title="Jestem porzadny">JP</abbr>
   <table>
     <caption style="border:2px solid black;">This is caption</caption>
-      <tr>
-        <th></th>
-        <td>Kyle</td>
-        <td colspan="2">Thomas</td>
-        
-      </tr> 
-      <tr>
-        <th>X</th>
-        <td rowspan="2">rowspan2</td>
-        <td colspan="2">colspan2</td>
-      </tr>
-      <tr>
-        <th>Y</th>
-        <td>1el</td>
-        <td>1el</td>
-      </tr>
+    <tr>
+      <th></th>
+      <td>Kyle</td>
+      <td colspan="2">Thomas</td>
+
+    </tr>
+    <tr>
+      <th>X</th>
+      <td rowspan="2">rowspan2</td>
+      <td colspan="2">colspan2</td>
+    </tr>
+    <tr>
+      <th>Y</th>
+      <td>1el</td>
+      <td>1el</td>
+    </tr>
   </table>
-  <iframe  src="https://www.agh.edu.pl/" style="height:400px;width:70%;border:none;">
-    </iframe>
+  <iframe src="https://youtube.com/embed/EZpdEljk5dY" style="height:400px;width:70%;border:none;">
+  </iframe>
   <br>
-  
-  <button type ="button" onclick="showGreetings()">Hello!</button>
-  <button type ="button" onclick="enhanceFont()">Enhance Font!</button>
-  <button type ="button" onclick="decreaseFont()">Decrease Font!</button>
+
+  <button type="button" onclick="showGreetings()">Hello!</button>
+  <button type="button" onclick="enhanceFont()">Enhance Font!</button>
+  <button type="button" onclick="decreaseFont()">Decrease Font!</button>
   <p id="scriptdemo">
     Say hello
   </p>
-  
+
   <script>
-    function showGreetings(){
-    document.getElementById("scriptdemo").innerHTML="Hello you too!";
+    function showGreetings() {
+      document.getElementById("scriptdemo").innerHTML = "Hello you too!";
     }
-    function enhanceFont(){
-      document.getElementById("scriptdemo").style.fontSize="40px";
+    function enhanceFont() {
+      document.getElementById("scriptdemo").style.fontSize = "40px";
     }
-    function decreaseFont(){
-      document.getElementById("scriptdemo").style.fontSize="30px";
+    function decreaseFont() {
+      document.getElementById("scriptdemo").style.fontSize = "30px";
     }
   </script>
 
-  <form>
-    Enter your name:<br> 
-    <input type="text"><br>
-    Select gender:<br>
-    Male<input type="radio" name="gender"><br>
-    Female<input type="radio" name="gender"><br>
-    Other<input type="radio" name="gender"><br>  
-    <input type="submit" >
+  <form method="GET" target="_blank">
+    <fieldset>
+      <legend>Car service:</legend>
+
+      Enter your name:
+      <br>
+      <input type="text" name="name">
+      <br> Select car service:
+      <br> Repair
+      <input type="radio" name="service">
+      <br> Advice
+      <input type="radio" name="service">
+      <br> Buy Parts
+      <input type="radio" name="service">
+      <br>
+
+      <select name="car" size="3" multiple style="padding:5px;">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+        <option value="fiat">Skoda</option>
+        <option value="audi">Ford</option>
+        <option value="fiat">Mazda</option>
+        <option value="audi">Opel</option>
+      </select>
+      <br>
+
+      <textarea name="description" rows="10" collumns "20" style="padding:10px;">
+      Describe your request here.
+      </textarea>
+      <br>
+
+
+      <input list="sysop">
+      <br>
+      <datalist id="sysop">
+        <option value="Linux"></option>
+        <option value="Windows"></option>
+        <option value="MacOS"></option>
+        <option value="Solaris"></option>
+      </datalist>
+
+
+
+      <button onclick="alert('you are polite, ok.')">Say please!</button>
+      <br>
+      <hr>
+      <input type="submit">
+    </fieldset>
   </form>
-  <br><br>
-  </body>
+  <hr>
+
+
+  <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    <fieldset>
+      <legend>Simple addition with output element</legend>
+      0
+      <input type="range" id="a" name="a" value="0"> 100 +
+      <input type="number" id="b" name="b" value="0"> =
+      <output name="x"></output>
+      <br>
+      <button type="submit">Send data</button>
+    </fieldset>
+
+  </form>
+  <br>
+
+
+  <form method="POST">
+    <fieldset>
+      <fieldset>
+        <legend>Create new user</legend>
+        User Name:
+        <input type="text" name="username" required autofocus placeholder="John Doe">
+        <br> Password:
+        <input type="password" name="password" required>
+        <br>
+        <br>
+      </fieldset>
+      <fieldset>
+        <legend>Personal data</legend>
+        Gender:
+        <br> Male
+        <input type="radio" name="gender" value="male">
+        <br> Female
+        <input type="radio" name="gender" value="female">
+        <br> Other
+        <input type="radio" name="gender" value="other">
+        <br>
+        <hr> Interests:
+        <hr> Vidya Games
+        <input type="checkbox" name="interests" value="vidya"> Reading books
+        <input type="checkbox" name="interests" value="books"> Fucking around
+        <input type="checkbox" name="interests" value="fuck">
+
+      </fieldset>
+      <button type="submit">Register!</button>
+    </fieldset>
+  </form>
+  <br>
+
+  <form method="POST">
+    <fieldset>
+      <legend>HTML5 exclusive input types</legend>
+      Color
+      <input type="color" name="fvcolor">
+      <br> Date
+      <input type="date" name="bday" max="2018-07-16">
+      <br> DateTime
+      <input type="datetime-local" name="bday-dt">
+      <br> Month
+      <input type="month" name="month-dt">
+      <br> Time
+      <input type="time" name="time-dt" disabled>
+      <br> Email
+      <input type="email" name="e-mail" placeholder="example@sth.com" required>
+      <br> File
+      <input type="file" name="my-file">
+      <br> Number
+      <input type="number" name="numeric" max="100" min="0" step="5" value="50">
+      <br>
+      <button type="submit">Submit!</button>
+    </fieldset>
+  </form>
+
+  <br>
+  <br>
+  <h3> Now for some demo of structure in HTML5</h3>
+  <header>
+    <h2> This is a header element</h2>
+  </header>
+  <nav>
+
+
+    <a href="#">Menu</a> |
+    <a href="#">Link 1</a> |
+    <a href="#">Link 2</a> |
+    <a href="#">Link 3</a>
+
+    <aside>
+      This is a description aside of the navigation
+    </aside>
+  </nav>
+
+  <div id="coordinates">
+    Press Button to get coords
+  </div>
+  <button onclick="getLocation()">Get my location!</button>
+  <script>
+    var x = document.getElementById("coordinates");
+
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showLocation);
+      } else {
+        x.innerHTML = "Couldn't fetch your location, might not be supported by your browser.";
+      }
+    }
+
+    function showLocation(position) {
+      x.innerHTML = "Longitude=" + position.coords.longitude +
+        ", Latitude=" + position.coords.latitude;
+    }
+  </script>
+
+  <h2>Some drag'n drop</h2>
+
+  <div style="width: 400px;height: 400px;border:2px black solid;float:left" ondrop="drop(event)" ondragover="event.preventDefault()">
+    <img src="./sample.jpg" style="width:400px;height:400px" id="dragged" draggable="true" ondragstart="drag(event)">
+  </div>
+
+  <div style="width: 400px;height: 400px;border:2px black solid;float:left" ondrop="drop(event)" ondragover="event.preventDefault()">
+  </div>
+
+  <script>
+    function drag(event) {
+      event.dataTransfer.setData("text", event.target.id);
+    }
+
+
+    function drop(event) {
+      var img_id = event.dataTransfer.getData("text");
+      event.target.appendChild(document.getElementById(img_id));
+      document.getElementById(img_id).style = "width:400px;height:400px";
+    }
+
+  </script>
+
+  <div style="clear:both;"></div>
+  <!--Web/Local storage-->
+
+
+  <div id="counter" style="float:none">
+    <button onclick="increaseCoutner()">Count!</button>
+    Click button to trigger counter
+  </div>
+  <script>
+    function increaseCoutner() {
+      if (typeof (Storage) != "undefined") {
+        if (localStorage.counter) {
+          localStorage.counter = Number(localStorage.counter) + 1;
+        } else {
+          localStorage.counter = 1;
+        }
+        document.getElementById("counter").innerHTML = "You have clicked the button "
+          + localStorage.counter + " times total. Reset your browser, it will be preserved.";
+      } else {
+        document.getElementById("counter").innerHTML = "This feature is not supported by your browser";
+      }
+    }
+
+  </script>
+
+  <!-- Web workers, call ../JavaScript/worker.js -->
+  <p>Works: <output id="works"></output></p>
+  <button onclick="startWorker()">Start Worker</button> 
+  <button onclick="stopWorker()">Stop Worker</button>
+  
+  <script>
+  var w;
+  
+  function startWorker() {
+      if(typeof(Worker) !== "undefined") {
+          if(typeof(w) == "undefined") {
+              w = new Worker("../JavaScript/worker.js");
+          }
+          w.onmessage = function(event) {
+              document.getElementById("works").innerHTML = event.data;
+          };
+      } else {
+          document.getElementById("works").innerHTML = "No Web Worker support";
+      }
+  }
+  
+  function stopWorker() { 
+      w.terminate();
+      w = undefined;
+  }
+  </script>
+</body>
 
 </html>
