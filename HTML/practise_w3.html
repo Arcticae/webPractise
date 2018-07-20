@@ -191,7 +191,7 @@
       <fieldset>
         <legend>Create new user</legend>
         User Name:
-        <input type="text" name="username" required autofocus placeholder="John Doe">
+        <input type="text" name="username" required  placeholder="John Doe">
         <br> Password:
         <input type="password" name="password" required>
         <br>
@@ -309,9 +309,9 @@
   <div style="clear:both;"></div>
   <!--Web/Local storage-->
 
-
+  <button onclick="increaseCoutner()">Count!</button>
+    
   <div id="counter" style="float:none">
-    <button onclick="increaseCoutner()">Count!</button>
     Click button to trigger counter
   </div>
   <script>
@@ -333,7 +333,7 @@
 
   <!-- Web workers, call ../JavaScript/worker.js -->
   <p>Works: <output id="works"></output></p>
-  <button onclick="startWorker()">Start Worker</button> 
+  <button onclick="startWorker()" accesskey="l">Start Worker</button> 
   <button onclick="stopWorker()">Stop Worker</button>
   
   <script>
@@ -342,7 +342,7 @@
   function startWorker() {
       if(typeof(Worker) !== "undefined") {
           if(typeof(w) == "undefined") {
-              w = new Worker("../JavaScript/worker.js");
+              w = new Worker("https://raw.githubusercontent.com/Arcticae/webPractise/master/JavaScript/worker.js");
           }
           w.onmessage = function(event) {
               document.getElementById("works").innerHTML = event.data;
@@ -357,6 +357,12 @@
       w = undefined;
   }
   </script>
+  <div>
+    <button class="tooltipped_button">I have a tooltip.
+      <div class="tooltipped_button_content">Press the button to go to...</div>
+    </button>
+    
+  </div>
 </body>
 
 </html>
