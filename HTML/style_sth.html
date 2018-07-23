@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../CSS/w3_styles.css"/>
-  
+  <link rel="stylesheet" href="../CSS/w3_styles.css" />
+
 </head>
 
 <body>
@@ -14,13 +14,89 @@
       <div class="tooltipped_button_content">Press the button to go to...</div>
     </button>
   </div>
-<button class="shadowed_button">I have a shadow</button>
+  <button class="shadowed_button">I have a shadow</button>
 
-<div class="gallery_photo" >
-  <img src="./dog_weed.jpg" style="width:100%"/>
-  <div class="caption">happy doggo</div>
-</div>
+  <div class="gallery_photo">
+    <img src="./dog_weed.jpg" style="width:100%" />
+    <div class="caption">happy doggo</div>
+  </div>
 
+  <div class="container">
+    <img src="./owl_weird.jpg" style="width:100%">
+    <div class="fadein_overlay">
+      <div class="fadein_text">Hello there!</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="./owl_weird.jpg" style="width:100%">
+    <div class="slidein_overlay">
+      <div class="fadein_text">Hello there!</div>
+    </div>
+  </div>
+
+  <ul class="breadcrumbs">
+    <li>
+      <a href="#lake_modal">Home</a>
+    </li>
+    <li>
+      <a href="#lake_modal">Pictures</a>
+    </li>
+    <li>
+      <a href="#lake_modal">Lakes</a>
+    </li>
+    <li>
+      Wallpapers
+    </li>
+  </ul>
+  <div class="three_columns">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+    aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+    aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,
+    vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+    zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil
+    imperdiet doming id quod mazim placerat facer possim assum.
+  </div>
+  
+  <img id="gallery_img" src="./lake_wpaper.jpg" alt="Nice Lake Picture" width="320" height="200">
+    
+  <div id="lake_modal" class="modal">
+    <span class="exit" id="exit_modal">x</span>
+    <img class="modal_content" id="lake_image" />
+    <div id="modal_caption"></div>
+  </div>
+
+  <script>
+    var modal = document.getElementById("lake_modal");
+    var img = document.getElementById("gallery_img");
+    var modal_img = document.getElementById("lake_image");
+    var modal_caption = document.getElementById("modal_caption");
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modal_img.src = this.src;
+      modal_caption.innerHTML = this.alt;
+
+    }
+
+    var exit_btn = document.getElementById("exit_modal");
+    exit_btn.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
+  <div class="center">
+    <div class="pagination_hoverable" id="pagination1">
+      <a href="#pagination1">&laquo;</a>
+      <a href="#pagination1">1</a>
+      <a href="#pagination1">2</a>
+      <a href="#pagination1" class="active">3</a>
+      <a href="#pagination1">4</a>
+      <a href="#pagination1">5</a>
+      <a href="#pagination1">6</a>
+      <a href="#pagination1">&raquo;</a>
+    </div>
+  </div>
 </body>
 
 </html>
