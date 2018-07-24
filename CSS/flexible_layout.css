@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica;
+    background-color: lightgrey;
+    /*so rest of the things can be wide */
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.nav {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.nav>a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    transition: 0.35s ease;
+    text-align: center;
+}
+
+.nav>a:hover {
+    background-color: grey;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+}
+
+.content {
+    padding: 2em;
+    flex:70%;
+    
+    border: 1px solid red;
+  
+}
+
+.sidebar {
+    flex:30%;
+    
+    padding: 2em;
+    
+  
+}
+
+.fake_img {
+    width: 80%;
+    padding: 20px;
+    background-color: grey;
+    border: 1px solid black
+    
+}
+.footer{
+    padding:20px;
+    margin-top:20px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+@media screen and (max-width:700px) {
+    .section,
+    .nav {
+        flex-direction: column;
+    }
+}
